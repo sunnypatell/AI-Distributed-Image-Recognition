@@ -4,6 +4,7 @@ import os
 import cv2
 import numpy as np
 
+
 def load_images_from_directory(directory):
     images = []
     labels = []
@@ -17,10 +18,12 @@ def load_images_from_directory(directory):
             labels.append(label)
     return np.array(images), np.array(labels)
 
+
 def main():
-    dataset_directory = 'dataset'
+    dataset_directory = "dataset"
     images, labels = load_images_from_directory(dataset_directory)
-    print(f'Loaded {len(images)} images with {len(np.unique(labels))} classes.')
+    print(f"Loaded {len(images)} images with {len(np.unique(labels))} classes.")
+
 
 if __name__ == "__main__":
     main()
